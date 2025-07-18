@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: #748DAE;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+     background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 450px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+    
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2:hover{
+    color:#3E5F44;
+}
+
+form label{
+    display:block;
+    margin: 10px 0 5px;
+}
+
+input{
+    margin-bottom: 15px;
+    width:100%;
+    padding:10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.show-pass {
+  display: flex;
+  align-items: center;
+  gap: 10px;       /* space between checkbox & text */
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.show-pass input[type="checkbox"] {
+  width: 16px;
+  height: 15px;
+  cursor: pointer;
+  margin: 0;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  background: #FFCB61;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover{
+    background: #F5CBCB;
+}
+
+#message {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.error {
+  background: red;
+  color:white;
+  border: 1px solid #f5c6cb;
+}
+
+.success {
+  background: green;
+  color: #fff;
+  border: 1px solid #c3e6cb;
+}

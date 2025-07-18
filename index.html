@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MERN Assignment 3 | Form Validation</title>
+  <script src="./jquery.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h2 class="heading">FORM VALIDATION</h2>
+    <div id="message"></div>
+
+    <form id="registrationForm" novalidate>
+      <label for="fname">Full Name:</label>
+      <input type="text" id="name" name="fname" required/>  
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required/>
+
+      <label for="phone">Mobile Number:</label>
+      <input type="text" id="phone" name="phone" maxlength="10"/>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+
+      <div class="show-pass">
+        <input type="checkbox" id="togglePassword">
+        <label for="togglePassword">Show Password</label>
+      </div>
+
+      <button type="submit" id="submitBtn">Submit</button>
+    </form>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
