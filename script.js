@@ -1,5 +1,18 @@
 $(document).ready(function () {
 
+  // Restrict phone number input
+  $('#phone')
+    .on('keypress', function (e) {
+      let charCode = e.which ? e.which : e.keyCode;
+      // 0-9 have keycodes 48-57 
+      if (charCode < 48 || charCode > 57) {
+        e.preventDefault();
+      }
+    })
+    .on('paste', function (e) {
+      e.preventDefault();
+    });
+
   // Show/Hide password
   $('#togglePassword').change(function () {
     let passInput = $('#password');
@@ -10,8 +23,9 @@ $(document).ready(function () {
     }
   });
 
+  //  Form Submit Validation
   $('#registrationForm').submit(function (e) {
-    e.preventDefault();  // stop default refresh
+    e.preventDefault();
 
     let name = $('#name').val().trim();
     let email = $('#email').val().trim();
@@ -48,7 +62,7 @@ $(document).ready(function () {
     showMessage("✅ Form submitted successfully!", "success");
   });
 
-  //function to display messages
+  // function to display messages
   function showMessage(msg, type) {
     $("#message")
       .text(msg)
